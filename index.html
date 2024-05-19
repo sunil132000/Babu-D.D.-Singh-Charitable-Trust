@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babu D.D. Singh Charitable Trust</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+ <script>
+  // Remove "/index.html" from the URL
+  const removeIndexHTML = () => {
+    const currentURL = window.location.href;
+    const newURL = currentURL.replace('/index.html', '');
+    window.history.replaceState({}, document.title, newURL);
+  }
+
+  // Call the function to remove "/index.html" when the page loads
+  window.addEventListener('load', removeIndexHTML);
+</script>
+<link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Babu D.D. Singh Charitable Trust</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Who We Are</a></li>
+                <li><a href="#projects">our Initiatives</a></li>
+                <li><a href="./gallery.html">Memories</a></li>
+                <li><a href="#connect">Connect with Us</a></li>
+                <li class="donation"><a href="#">Donation</a></li>
+
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+        <div class="overlay">
+            <div id="carouselExampleControlsNoTouching" class="carousel slide slider_c" data-bs-touch="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./assets//slider/IND-dbcPune-001-1.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/slider/pexels-ashwani-19137268.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/slider/pexels-plato-terentev-3804555-5909870.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/slider/pexels-plato-terentev-3804555-5909876.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/slider/pexels-rohan-dewangan-2844320-10066330.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/slider/pexels-shuvrasankha-11621580.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <section id="home">
+                <div class="hero">
+                    <h1>Welcome to Babu D.D. Singh Charitable Trust</h1>
+                    <p>Babu D.D. Singh Charitable Trust is a non-profit, non-political organization working in an inclusive way for the holistic development of children and persons with and without disabilities, and from marginalized sections of the society.</p>
+                    <div class="donation hero-do" style="margin-top: 2rem;"><a href="#">Donate Now!</a></div>
+
+                </div>
+            </section>
+        </div>
+    </header>
+
+
+    <section id="about">
+        <h2>Who We Are</h2>
+        <p>
+            Babu D.D. Singh Charitable Trust is dedicated to enabling differently abled and marginalized children and youth to receive comprehensive rehabilitation, education, and vocational training. Our mission is to empower these individuals so they can take care of their social, physical, and spiritual needs, and become fully integrated into society.
+        </p>
+        <p>
+            We envision a world that ensures the inclusion of differently abled and marginalized children and youth into mainstream society. Our aim is to create an environment where they feel welcome, supported, and empowered.
+        </p>
+    </section>
+    <section id="donation">
+        <div class="content">
+            <h2>Donate Now</h2>
+            <p>Your contribution can help us make a significant impact on the lives of those in need.</p>
+            <div class="donation-progress">
+                <div class="progress-circle">
+                    <svg viewBox="0 0 36 36" class="circular-chart green">
+                        <path class="circle-bg"
+                              d="M18 2.0845
+                                 a 15.9155 15.9155 0 0 1 0 31.831
+                                 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                        <path class="circle"
+                              stroke-dasharray="0, 100"
+                              d="M18 2.0845
+                                 a 15.9155 15.9155 0 0 1 0 31.831
+                                 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                        <text x="18" y="20.35" class="percentage">0%</text>
+                    </svg>
+                </div>
+                <div class="progress-info">
+                    <div class="current">
+                        <span>Current</span>
+                        <span>₹16,30,008</span>
+                    </div>
+                    <div class="target">
+                        <span>Target</span>
+                        <span>₹16,30,000</span>
+                    </div>
+                </div>
+            </div>
+            <p class="thank-you">Thank you to all our donors, we have met our fundraising goal.</p>
+        </div>
+    </section>
+    <section id="projects">
+        <h2>Our Initiatives</h2>
+        <div class="project-list">
+            <div class="project">
+                <h3>Health</h3>
+                <p>Babu D.D. Singh Charitable Trust holistic rehab program includes Medical, Therapeutics, Capacity Building, and Sensitization.</p>
+               
+            </div>
+            <div class="project">
+                <h3>Education</h3>
+                <p>Welcome to Babu D.D. Singh Charitable Trust, education is a vital step in supporting the confidence, dreams, and talents of our students.</p>
+               
+            </div>
+            <div class="project">
+                <h3>Livelihood</h3>
+                <p>We empower youth with disabilities through skills training and aiding micro-enterprise establishment.</p>
+               
+            </div>
+            <div class="project">
+                <h3>Higher Education</h3>
+                <p>Babu D.D. Singh Charitable Trust Higher Education division empowers Persons with Disabilities through education, employment, and awareness.</p>
+               
+            </div>
+        </div>
+    </section>
+    <!-- <section id="projects">
+        <h2>Our Projects</h2>
+        <div class="project-list">
+            <div class="project">
+                <h3>Education for All</h3>
+                <img src="education.jpg" alt="Education">
+                <p>Providing quality education to underprivileged children.</p>
+            </div>
+            <div class="project">
+                <h3>Health Camps</h3>
+                <img src="health.jpg" alt="Health">
+                <p>Organizing health camps in rural areas to ensure medical care for all.</p>
+            </div>
+            <div class="project">
+                <h3>Women Empowerment</h3>
+                <img src="women.jpg" alt="Women Empowerment">
+                <p>Empowering women through skills training and support.</p>
+            </div>
+        </div>
+    </section> -->
+
+   
+
+
+
+    <section id="connect">
+        <h2>Connect with Us</h2>
+        <div class="contact-methods">
+            <div class="contact-item">
+                <h3>Address</h3>
+                <p>VILLAGE BAGHAW, POST SAHATWAR, TEHSIL BASHADIH,<br> BALLIA, UTTAR PRADESH, 277211
+                    INDIA</p>
+            </div>
+            <div class="contact-item">
+                <h3>Phone</h3>
+                <p>+91- 8528806881</p>
+            </div>
+            <div class="contact-item">
+                <h3>Email</h3>
+                <p>babuddsinghcharitabletrust@gamil.com</p>
+            </div>
+            <div class="contact-item">
+                <h3>Follow Us</h3>
+                <p>
+                    <a href="https://facebook.com/ngoindia" target="_blank">Facebook</a> | 
+                    <a href="https://twitter.com/ngoindia" target="_blank">Twitter</a> | 
+                    <a href="https://instagram.com/ngoindia" target="_blank">Instagram</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 NGO India. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+ 
+</body>
+</html>
