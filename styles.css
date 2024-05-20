@@ -6,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    text-decoration: none;
 }
 
 body {
@@ -20,7 +21,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
     background: #f88400;
     color: #fff;
     padding: 1rem 2rem;
@@ -34,30 +34,19 @@ nav {
 .nav-links {
     font-size: 1rem;
     list-style: none;
+    display: flex;
 }
-.donation a{
+
+.donation a {
     text-decoration: none;
     border-radius: 5px;
     font-weight: 800;
-    padding:.5rem 1rem  .5rem 1rem;
-    /* padding-right: ; */
-    /* color: #fff; */
-    color: #f88400 !important;
-    background-color: #fff;
-}
-.hero-do a:hover{
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 900;
-    padding:.5rem 1rem  .5rem 1rem;
-    /* padding-right: ; */
-    /* color: #fff; */
+    padding: .5rem 1rem;
     color: #f88400 !important;
     background-color: #fff;
 }
 
 .nav-links li {
-    display: inline;
     margin-left: 2rem;
 }
 
@@ -77,6 +66,34 @@ nav {
     background: #fff;
     margin: 5px;
 }
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background: #f88400;
+        position: absolute;
+        top: 80px;
+        left: 0;
+    }
+
+    .nav-links.active {
+
+        display: flex;
+        z-index: 100;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
 .overlay{
     position: relative;
 }
@@ -198,9 +215,48 @@ section {
 .explore-button:hover {
     background: #feb47b;
 }
+.hero .donation{
+    margin-top: 2rem;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .hero{
+        padding: .75rem;
+    }
+    .hero h1{
+        font-size: 1rem;
+    }
+    .hero p{
+        font-size: 0.8rem;
+    }
+    #home {
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%, -5%);
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(51, 51, 51, 0.45); /* More readable way to set the background color with opacity */
+        color: #fff;
+        
+        padding: 20px; /* Added padding for better spacing */
+        text-align: center; /* Center text content */
+        border-radius: 10px; /* Rounded corners for aesthetics */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better visual separation */
+    }
+    .slider_c {
+        position: relative;
+        width: 100%;
+        height: 100% ;
+        overflow: hidden;
+    }
+    .hero .donation{
+        font-size: 0.8rem;
+        margin-top: 1rem;
+    }
     .project-list {
         flex-direction: column;
         align-items: center;
@@ -259,7 +315,8 @@ form input, form textarea, form button {
 }
 
 footer {
-    background: #333;
+    background: #f88400;
+    font-weight: 800;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
@@ -267,7 +324,7 @@ footer {
 
 /* Responsive CSS */
 @media (max-width: 768px) {
-    .nav-links {
+    /* .nav-links {
         display: none;
         flex-direction: column;
     }
@@ -278,7 +335,7 @@ footer {
 
     .burger {
         display: block;
-    }
+    } */
 
     .project, .contact-item {
         flex: 1 1 100%;
@@ -460,3 +517,138 @@ footer {
     }
   }
   
+  
+#donation .content {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#donation h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#donation p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.donation-methods{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 30px;
+}
+
+.qr-code {
+    margin: 20px 20px;
+}
+.bank-info{
+    text-align: justify;
+}
+.bank-details{
+    margin-left: 40px;
+
+}
+.bank-details h3{
+    text-decoration: underline;
+
+}
+.qr-code img {
+    width: 300px;
+    height: auto;
+}
+
+.thank-you {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    #donation .content {
+        padding: 10px;
+    }
+
+    #donation h2 {
+        font-size: 2rem;
+    }
+
+    #donation p, .thank-you {
+        font-size: 1rem;
+    }
+
+    .qr-code img {
+        width: 150px;
+    }
+    .donation-methods{
+      
+        flex-wrap: wrap;
+        gap: 0px;
+    }
+    .bank-info{
+        text-align: left;
+    }
+}
+#trustees {
+    padding: 50px 10px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 85%;
+}
+
+#trustees .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#trustees h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.trustees-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.card {
+    max-width: 200px;
+    height: 350px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .card img{
+    width: 100%;
+    height: 200px;
+  }
+  /* Add some padding inside the card container */
+  .container {
+    padding: 2px 16px;
+  }
+
+@media (max-width: 768px) {
+    .trustees-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .trustee {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+}

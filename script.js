@@ -3,8 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelector('.nav-links');
 
     burger.addEventListener('click', () => {
-        navLinks.classList.toggle('nav-active');
+        navLinks.classList.toggle('active');
     });
+});
+document.addEventListener('DOMContentLoaded', () => {
+
+
 
     // Slider functionality
     let currentIndex = 0;
