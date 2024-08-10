@@ -84,7 +84,7 @@
                     <h1>Welcome to Babu D.D. Singh Charitable Trust</h1>
                     <p>Babu D.D. Singh Charitable Trust is a non-profit, non-political organization working in an
                         inclusive way for the holistic development of children and persons with and without
-                        disabilities, and from marginalized sections of the society.</p>
+                        disabilities, and from marginalized sections of the society.</p>
                     <div class="donation hero-do" ><a href="./donation.html">Donate Now!</a></div>
 
                 </div>
@@ -197,11 +197,12 @@
                       <p>administrator</p>
                     </div>
                   </div>
-                <div class="card">
-                    <img src="./assets/trusties/WhatsApp Image 2024-05-20 at 21.01.24_6dd187c9.jpg" alt="Avatar" style="width:100%">
+                
+                  <div class="card">
+                    <img src="./assets/trusties/ajaysingh.jpeg" alt="Avatar" style="width:100%">
                     <div class="container">
-                      <h4><b>Pt. Rameshwar ram ji</b></h4>
-                      <p>temple priest</p>
+                      <h4><b>Ajay Singh</b></h4>
+                      <p>Treasurer</p>
                     </div>
                   </div>
                 
@@ -290,7 +291,7 @@
 
             const showSlide = (index) => {
                 slides.forEach((slide, i) => {
-                    slide.style.transform = `translateX(${(i - index) * 100}%)`;
+                    slide.style.transform = translateX(${(i - index) * 100}%);
                 });
             };
 
@@ -308,13 +309,13 @@
             const radius = circle.r.baseVal.value;
             const circumference = 2 * Math.PI * radius;
 
-            circle.style.strokeDasharray = `${circumference} ${circumference}`;
+            circle.style.strokeDasharray = ${circumference} ${circumference};
             circle.style.strokeDashoffset = circumference;
 
             const offset = circumference - (percentage / 100) * circumference;
             circle.style.strokeDashoffset = offset;
 
-            document.querySelector('.percentage').textContent = `${percentage}%`;
+            document.querySelector('.percentage').textContent = ${percentage}%;
         });
 
     </script>
