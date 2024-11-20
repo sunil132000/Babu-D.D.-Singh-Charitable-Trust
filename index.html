@@ -272,55 +272,60 @@
         <p>&copy; 2024 Babu D.D. Singh Charitable Trust,VILLAGE BAGHAW, POST SAHATWAR, TEHSIL BASHADIH, BALLIA, UTTAR PRADESH, 277211 .<br> All rights reserved.</p>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-    const burger = document.querySelector('.burger');
-    const navLinks = document.querySelector('.nav-links');
+   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Burger menu functionality
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
 
-    burger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-});
+        if (burger && navLinks) {
+            burger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            
-            // Slider functionality
-            let currentIndex = 0;
-            const slides = document.querySelectorAll('.slide');
-            const totalSlides = slides.length;
+        // Slider functionality
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
 
-          const showSlide = (index) => {
-    slides.forEach((slide, i) => {
-        slide.style.transform = `translateX(${(i - index) * 100}%)`;
-    });
-};
+        const showSlide = (index) => {
+            slides.forEach((slide, i) => {
+                slide.style.transform = `translateX(${(i - index) * 100}%)`;
+            });
+        };
 
+        const nextSlide = () => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            showSlide(currentIndex);
+        };
 
-            const nextSlide = () => {
-                currentIndex = (currentIndex + 1) % totalSlides;
-                showSlide(currentIndex);
-            };
-
+        if (slides.length > 0) {
             setInterval(nextSlide, 3000);
             showSlide(currentIndex);
-        });
-        document.addEventListener('DOMContentLoaded', function () {
-            const percentage = 100; // Set this to your actual progress percentage
-            const circle = document.querySelector('.circle');
+        }
+
+        // Circular progress bar functionality
+        const percentage = 100; // Set this to your actual progress percentage
+        const circle = document.querySelector('.circle');
+        const percentageText = document.querySelector('.percentage');
+
+        if (circle) {
             const radius = circle.r.baseVal.value;
             const circumference = 2 * Math.PI * radius;
 
-            circle.style.strokeDasharray = ${circumference} ${circumference};
+            circle.style.strokeDasharray = `${circumference} ${circumference}`;
             circle.style.strokeDashoffset = circumference;
 
             const offset = circumference - (percentage / 100) * circumference;
             circle.style.strokeDashoffset = offset;
 
-            document.querySelector('.percentage').textContent = ${percentage}%;
-        });
-
-    </script>
-
+            if (percentageText) {
+                percentageText.textContent = `${percentage}%`;
+            }
+        }
+    });
+</script>
     <!-- <script src="./script.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
